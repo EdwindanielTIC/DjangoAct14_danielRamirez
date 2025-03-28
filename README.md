@@ -12,3 +12,8 @@ Despues de haber realizado la creacion de docker y de haber creado los mdoels, h
 luego hacemos la migrations 
 
 ![image](https://github.com/user-attachments/assets/416a62f3-9196-4829-8882-f82c8c15add7)
+
+
+Captura de como queda la tabla de la base de datos despues de haber hecho la migration : 
+
+![image](https://github.com/user-attachments/assets/8993c251-59b8-41d2-affe-9b0e7ff146bf)
