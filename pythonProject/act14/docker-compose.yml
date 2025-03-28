@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+
+  dbac14:
+    image: postgres:13
+    container_name: actitivat14Django
+    environment:
+      - POSTGRES_DB=DjangoPostgres
+      - POSTGRES_PASSWORD=pass_postgres1 # esta sera la contraseña que se usara para conectarse a la base de datos
+      - POSTGRES_USER=user_postgres1 # esta sera el usuario que se usara para conectarse a la base de datos cuaando lo habra desde pgadmin
+    ports:
+      - "5433:5432" #he cambiado el puerto de 5432 a 5433 poeque me daba problemas con el puerto 5432
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4Django
+    ports:
+      - "80:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 2024_edwin.ramirez@iticbcn.cat
+      PGADMIN_DEFAULT_PASSWORD: 2024_edwin.ramirez
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+volumes:
+  local_pgdata:
+  pgadmin-data:
