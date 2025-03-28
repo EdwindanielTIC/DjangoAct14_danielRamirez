@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'appact14'
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,11 @@ WSGI_APPLICATION = 'act14.wsgi.application'
 DATABASES = {
     'default': {
        "ENGINE" : "django.db.backends.postgresql",
-        "NAME" : "",
-        "USER" : "",
-        "PASSWORD" : "",
+        "NAME" : "DjangoPostgres",
+        "USER" : "user_postgres1",
+        "PASSWORD" : "pass_postgres1",
         "HOST" : "127.0.0.1",
-        "PORT" : "5432",
+        "PORT" : "5433",
     }
 }
 
