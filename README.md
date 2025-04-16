@@ -17,3 +17,10 @@ luego hacemos la migrations
 Captura de como queda la tabla de la base de datos despues de haber hecho la migration : 
 
 ![image](https://github.com/user-attachments/assets/8993c251-59b8-41d2-affe-9b0e7ff146bf)
+
+
+
+
+Creando un superUser 
+
+![image](https://github.com/user-attachments/assets/f8d64ce0-5d82-4cf4-a54f-afb861f19561)
