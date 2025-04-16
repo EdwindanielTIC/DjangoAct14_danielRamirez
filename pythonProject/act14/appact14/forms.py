@@ -3,7 +3,7 @@ from .models import Usuario
 
 class logginForm(forms.ModelForm):
     class Meta:
-        fields = '__all__'
+        fields = ['email','password']
         model = Usuario
 
 

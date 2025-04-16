@@ -1,5 +1,7 @@
 from django.db import models
 
+# contraseñas de superUSER username : danieladmin, password :daniel123
+
 # Create your models here.
 
 class Usuario(models.Model):

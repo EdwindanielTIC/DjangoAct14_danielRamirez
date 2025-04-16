@@ -1,9 +1,6 @@
 {% extends 'index.html' %}
 
-
 {% block content %}
-
-
 <h1 style="text-align: center; color: cadetblue" >Bienvenidos a DAW2B</h1>
     <div id="container">
         <label for="username"> Usuario</label>
@@ -12,7 +9,7 @@
     <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required> <br><br>
      <button type="submit">Iniciar Sesión</button><br><br>
 
-    <form action="{% url 'CrearUsuario' %}" method="get">
+    <form action="{% url 'create_user' %}" method="get">
         <button type="submit"> Crear usuario </button>
 
     </form>
