@@ -35,4 +35,9 @@ def create_user(request):
         if form.is_valid():
             form.save()
             return render(request, 'CreatUser.html', {'success': True})
-    return render(request, 'CreatUser.html', {'form': form})
+    # return render(request, 'CreatUser.html', {'form': form})
+
+# funcion que me creara el boton para ir a la creacion de usuario y contraseña
+
+def boton_CrearUsuario(request):
+     return render(request, 'CreatUser.html' )

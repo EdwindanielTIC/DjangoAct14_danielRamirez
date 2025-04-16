@@ -1,10 +1,22 @@
 {% extends 'index.html' %}
 
 
+{% block content %}
 
-<h1> CREANDO USUARIO </h1>
 
+<h1 style="text-align: center; color: cadetblue" >Bienvenidos a DAW2B</h1>
+    <div id="container">
+        <label for="username"> Usuario</label>
+    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required> <br><br>
+     <label for="password"> Contraseña </label>
+    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required> <br><br>
+     <button type="submit">Iniciar Sesión</button><br><br>
 
-<p> introduce nombre </p>
-<p>Introduce contraseña </p>
+    <form action="{% url 'CrearUsuario' %}" method="get">
+        <button type="submit"> Crear usuario </button>
 
+    </form>
+
+    </div>
+
+{% endblock %}
