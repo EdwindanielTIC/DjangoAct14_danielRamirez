@@ -1,5 +1,4 @@
-
-
+from django.contrib.messages import success
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 # Create your views here.
@@ -31,11 +30,14 @@ def loggin_form(request):
 
 
 def create_user(request):
-    form = createUserForm()
+    success = False
     if request.method == 'POST':
         form = createUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            success = True
+    else:
+        form = createUserForm()
 
-    return render(request, 'CreatUser.html', {'form': form})
+    return render(request, 'CreatUser.html', {'form': form, 'success': success})
+    # esto hacer que me devuelva la web crearUsuario.hmtl, si no esta , no me la devuelve

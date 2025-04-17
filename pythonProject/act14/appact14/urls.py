@@ -4,5 +4,4 @@ urlpatterns = [
     path("", views.index, name="index"),
     path('login/', views.loggin_form, name='login'),
     path('create_user/', views.create_user, name='create_user'),
-
 ]
