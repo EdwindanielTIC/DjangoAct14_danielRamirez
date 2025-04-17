@@ -12,5 +12,5 @@ class Usuario(models.Model):
     password = models.CharField(max_length=128, null=False)
 
 # he me visto obligado al hacer el python manage makemigration a escoger la opcion 1, esto me solicito una contraseña para todos los usuarios que sera 1234
-    def __str__(self):
-        return self.username
+#     def __str__(self):
+#         return self.username

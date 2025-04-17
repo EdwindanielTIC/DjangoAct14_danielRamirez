@@ -8,7 +8,7 @@
 
     <div id="container">
         <label for="nombre"> nombre </label>
-    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required> <br><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required> <br><br>
 
         <label for="apellido"> apellido </label>
         <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required> <br><br>
@@ -17,11 +17,25 @@
         <input type="text" id="email" name="email" placeholder="Ingresa tu email" required> <br><br>
 
 
-     <label for="password"> Contraseña </label>
-    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required> <br><br>
+        <label for="password"> Contraseña </label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required> <br><br>
 
      <button type="submit">Crear usuario</button>
     </div>
+
+    {% for user in  usuarios  %}
+
+        { {user.nombre}}
+        { {user.apellido}}
+        { {user.email}}
+        { {user.password}}
+    {% endfor %}
+
+{% if success %}
+
+<p style="color: green; text-align:  center"> USUARIO CREADO EXITOSAMENTE </p>
+
+{% endif %}
 
 </body>
 
