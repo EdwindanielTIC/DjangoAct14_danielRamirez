@@ -19,6 +19,7 @@
     {% else %}
         <form method="POST">
             {% csrf_token %}
+{#            lo siguiente hace que todo lo que hay en el form se me aparezca en el html#}
             {{ form.as_p }}
             <button type="submit">Crear usuario</button>
         </form>
