@@ -28,6 +28,13 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+LOGIN_URL = '/login/'  # UR DE MI LOGGIN
+LOGIN_REDIRECT_URL = '/PaginaLogin/'  # PAGINA QUE SE ME ABRIRAR DESPUES DE INICIAR SECCION
+LOGOUT_REDIRECT_URL = '/login/'  # a dónde te lleva al cerrar sesión
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,6 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'act14.urls'
+
 
 TEMPLATES = [
     {

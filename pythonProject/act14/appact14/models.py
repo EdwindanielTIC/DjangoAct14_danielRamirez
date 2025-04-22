@@ -2,6 +2,9 @@ from django.db import models
 
 # contraseñas de superUSER username : danieladmin, password :daniel123
 
+# usuairo para iniciar seccion en el login.html : Usuario(username='dani123', password=make_password('tu_clave_segura'))
+
+
 # Create your models here.
 
 class Usuario(models.Model):

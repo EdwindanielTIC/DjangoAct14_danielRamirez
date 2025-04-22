@@ -1,5 +1,6 @@
 from django import forms
 from .models import Usuario
+from django.contrib.auth.forms import UserCreationForm
 
 
 class logginForm(forms.ModelForm):
@@ -9,9 +10,8 @@ class logginForm(forms.ModelForm):
 
 
 class createUserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+
     class Meta:
         model = Usuario
-        fields = ['username','nombre', 'apellido', 'email', 'password']
-        widgets = {
-            'password': forms.PasswordInput(),
-        }
+        fields = ['username', 'email', 'nombre', 'apellido', 'password']

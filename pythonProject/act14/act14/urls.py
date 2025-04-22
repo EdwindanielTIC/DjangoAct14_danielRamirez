@@ -22,4 +22,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('appact14/',include('appact14.urls')),
+
+    # path('accounts/', include('django.contrib.auth.urls')),
+    # esta linea es la mas importante para poder hacer el login y el logout
 ]

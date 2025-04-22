@@ -1,0 +1,43 @@
+{%  extends 'index.html' %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <h1>¡Bienvenido!</h1>
+        <p>Has iniciado sesión correctamente.</p>
+{#        <a href="login.html" class="button">Cerrar Sesión</a>#}
+        <a href="{% url 'logout' %}" class="button">Cerrar Sesión</a>
+    </div>
+</body>
+
+
+<style>
+
+    h1 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+</style>
+{% endblock %}
