@@ -4,9 +4,10 @@
 
 <body>
     <div class="container">
-        <h1>¡Bienvenido!</h1>
+       <h1>¡Bienvenido {{ usuario.nombre }} {{ usuario.apellido }}!</h1>
         <p>Has iniciado sesión correctamente.</p>
 {#        <a href="login.html" class="button">Cerrar Sesión</a>#}
+        <img src="https://th.bing.com/th/id/OIP.M0Zfg7c_E5K8KUZy2CnZxwHaEw?rs=1&pid=ImgDetMain" alt="img"> <br><br>
         <a href="{% url 'logout' %}" class="button">Cerrar Sesión</a>
     </div>
 </body>
@@ -14,6 +15,19 @@
 
 <style>
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+}
+
+img {
+    display: block; /* Evita espacios debajo de la imagen */
+    max-width: 100%;
+    height: auto; /* Mantiene las proporciones de mi imagen */
+}
     h1 {
     color: #4CAF50;
     margin-bottom: 10px;

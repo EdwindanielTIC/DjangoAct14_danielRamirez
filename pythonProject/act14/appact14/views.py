@@ -7,14 +7,14 @@ from .forms import createUserForm
 from .models import Usuario
 
 
-
 def paginaIncial(request):
-    return render(request, 'PaginaLogin.html')
+    usuario = Usuario.objects.get(id=request.session['usuario_id'])
+    return render(request, 'PaginaLogin.html', {'usuario':usuario})
 
 # este sera lo que se recorrera el bucle
-def usuarios(request):
-    usuarios = Usuario.objects.all()
-    return render(request,'CreatUser.html',{'usuarios':usuarios})
+# def usuarios(request):
+#     usuarios = Usuario.objects.all()
+#     return render(request,'CreatUser.html',{'usuarios':usuarios})
 
 
 def loggin_form(request):
