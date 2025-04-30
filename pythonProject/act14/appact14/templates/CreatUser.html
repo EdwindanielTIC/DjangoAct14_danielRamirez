@@ -17,8 +17,11 @@
             {% csrf_token %}
 {#            lo siguiente hace que todo lo que hay en el form se me aparezca en el html#}
             {{ form.as_p }}
-            <button type="submit">Crear usuario</button>
+            <button type="submit">Crear usuario</button> <br><br>
         </form>
+
+        <a href="{% url 'logout' %}" class="button">Volver</a>
+
     {% endif %}
 </div>
 
@@ -49,6 +52,17 @@
 
 
 <style>
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 
     .success-message {
     color: green;

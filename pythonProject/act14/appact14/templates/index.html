@@ -10,8 +10,12 @@
 
 <body style="background-color: burlywood">
 
+
+
+
     <div id="container">
         {% block content %}
+            <p id="bienvenida"> BIENVENIDO A LAS ACTIVIDAD 14 </p>
         {% endblock %}
 
     </div>
@@ -22,6 +26,17 @@
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
         }
+
+     #bienvenida {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
         nav {
             background-color: #e3f2fd;
             padding: 10px;

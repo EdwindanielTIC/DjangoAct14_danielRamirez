@@ -7,6 +7,10 @@ from .forms import createUserForm
 from .models import Usuario
 
 
+def index(request):
+    return render(request,'index.html')
+
+
 def paginaIncial(request):
     usuario = Usuario.objects.get(id=request.session['usuario_id'])
     return render(request, 'PaginaLogin.html', {'usuario':usuario})
